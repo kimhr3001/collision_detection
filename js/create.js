@@ -10,7 +10,7 @@ function createNav() {
     { name: '점과 선', href: 'index.html?type=point-line' },
     { name: '', href: '' },
     {
-      name: '출처',
+      name: '참조',
       href: 'https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection',
       target: '_blank',
     },
