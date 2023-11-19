@@ -8,10 +8,15 @@ function createNav() {
     { name: 'Rectangles', href: 'index.html?type=rectangle-rectangle' },
     { name: 'Circles', href: 'index.html?type=circle-circle' },
     { name: 'Point-Line', href: 'index.html?type=point-line' },
-    { name: '', href: '' },
+    { name: '', href: '', class: 'list-type-none' },
     {
-      name: '참조',
+      name: '참고문서',
       href: 'https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection',
+      target: '_blank',
+    },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/kimhr3001/collision_detection',
       target: '_blank',
     },
   ];
@@ -23,7 +28,9 @@ function createNav() {
     if (item.target) {
       a.setAttribute('target', item.target);
     }
-
+    if (item.class) {
+      li.classList.add(item.class);
+    }
     a.textContent = item.name;
     li.append(a);
     ul.append(li);
