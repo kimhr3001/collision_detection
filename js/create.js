@@ -3,11 +3,11 @@ function createNav() {
   const ul = document.createElement('ul');
 
   const location = [
-    { name: '처음으로', href: 'index.html' },
-    { name: '점과 면', href: 'index.html?type=point-rectangle' },
-    { name: '면과 면', href: 'index.html?type=rectangle-rectangle' },
-    { name: '원과 원', href: 'index.html?type=circle-circle' },
-    { name: '점과 선', href: 'index.html?type=point-line' },
+    { name: 'Main', href: 'index.html' },
+    { name: 'Point-Rectangle', href: 'index.html?type=point-rectangle' },
+    { name: 'Rectangles', href: 'index.html?type=rectangle-rectangle' },
+    { name: 'Circles', href: 'index.html?type=circle-circle' },
+    { name: 'Point-Line', href: 'index.html?type=point-line' },
     { name: '', href: '' },
     {
       name: '참조',
