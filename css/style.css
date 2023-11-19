@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10pt;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 150px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 20px;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.field {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background-image: linear-gradient(
+      90deg,
+      #cdcccc 0px,
+      #cdcccc 1px,
+      transparent 1px,
+      transparent 99px,
+      transparent 100px
+    ),
+    linear-gradient(
+      #cdcccc 0px,
+      #cdcccc 1px,
+      transparent 1px,
+      transparent 99px,
+      transparent 100px
+    ),
+    linear-gradient(
+      #e0e0e0 0px,
+      #e0e0e0 1px,
+      transparent 1px,
+      transparent 99px,
+      transparent 100px
+    ),
+    linear-gradient(
+      90deg,
+      #e0e0e0 0px,
+      #e0e0e0 1px,
+      transparent 1px,
+      transparent 99px,
+      transparent 100px
+    ),
+    linear-gradient(
+      transparent 0px,
+      transparent 5px,
+      #f6f6f6 5px,
+      #f6f6f6 95px,
+      transparent 95px,
+      transparent 100px
+    ),
+    linear-gradient(
+      90deg,
+      #e0e0e0 0px,
+      #e0e0e0 1px,
+      transparent 1px,
+      transparent 99px,
+      #e0e0e0 99px,
+      #e0e0e0 100px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 5px,
+      #f6f6f6 5px,
+      #f6f6f6 95px,
+      transparent 95px,
+      transparent 100px
+    ),
+    linear-gradient(
+      transparent 0px,
+      transparent 1px,
+      #f6f6f6 1px,
+      #f6f6f6 99px,
+      transparent 99px,
+      transparent 100px
+    ),
+    linear-gradient(#cdcccc, #cdcccc);
+  background-size: 100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px,
+    100px 100%, 100px 100%, 100px 100px, 100px 100px;
+}
+.move-point {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 1px;
+  height: 1px;
+  background: #ffffff;
+  z-index: 10;
+}
+.move-point > a {
+  top: -10px;
+  left: -10px;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: gray;
+}
+
+.move-rectangle {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  background: #f1f4f9;
+  box-shadow: inset 0 0 0 1px black;
+}
+
+.move-circle {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f1f4f9;
+  box-shadow: inset 0 0 0 1px black;
+  z-index: 10;
+}
+
+.move-point.collision > a,
+.move-rectangle.collision,
+.move-circle.collision {
+  background-color: red;
+}
+
+.rectangle {
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  width: 100px;
+  height: 200px;
+  background: #f1f4f9;
+  box-shadow: inset 0 0 0 1px black;
+}
+
+.circle {
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background: #f1f4f9;
+  box-shadow: inset 0 0 0 1px black;
+}
+
+.line {
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  width: 0px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: black;
+}
+.line-horizon {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  width: 200px;
+  height: 0px;
+  border: 1px solid black;
+  background-color: black;
+}

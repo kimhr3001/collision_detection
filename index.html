@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>충돌예제</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/common.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/collision.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav></nav>
+      <section></section>
+    </div>
+  </body>
+</html>
+<script>
+  const collisionType = getParameterByName('type');
+  createNav();
+  createField();
+  initElement(collisionType);
+</script>
